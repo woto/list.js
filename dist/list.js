@@ -467,7 +467,7 @@ module.exports = function toArray(collection) {
   if (typeof collection === 'string') return [collection]
   if (collection instanceof Array) return collection
   if (typeof collection.length != 'number') return [collection]
-  if (typeof collection === 'function') return [collection]
+  if (typeof collection === 'function') return collection
 
   var arr = []
   for (var i = 0; i < collection.length; i++) {
